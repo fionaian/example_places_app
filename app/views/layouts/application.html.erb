@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ExamplePlacesApp</title>
+    <title>Example Places App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <div>
+      <a href="/places">All places</a>
+      <a href="/places/new">New Place</a>
+    </div>
     <%= yield %>
   </body>
 </html>
