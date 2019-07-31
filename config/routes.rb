@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get "/places/:id/edit" => "places#edit"
     patch "/places/:id" => "places#update"
     delete "/places/:id" => "places#destroy"
+
+    post "/users" => "users#create"
   end
 end
