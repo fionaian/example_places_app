@@ -15,13 +15,14 @@ class Api::PlacesController < ApplicationController
     @place = Place.new(
       name: params["name"],
       address: params["address"],
+      image: params["image"],
     )
     @place.save
     render "show.json.jb"
   end
 
   def show
-    @places = Place.find_by(id: params["id"])
+    @place = Place.find_by(id: params["id"])
     render "show.json.jb"
   end
 
@@ -29,6 +30,7 @@ class Api::PlacesController < ApplicationController
     @place = Place.find_by(id: params["id"])
     @place.name = params["name"] || @place.name
     @place.address = params["address"] || @place.address
+    @place.image = params["image"] || @place.image
     @place.save
     render "show.json.jb"
   end
